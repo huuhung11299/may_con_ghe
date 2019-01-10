@@ -1,0 +1,39 @@
+header
+	.navbar
+		+pad(null 0)
+	.navbar-brand
+		img 
+			max-height: 2rem
+	+media-breakpoint-up(md)
+		.navbar
+			display: block!important
+		.navbar-brand
+			display: block
+			text-align: center
+			margin-bottom: 10px
+			img 
+				max-height: 3rem
+		.navbar-collapse
+			justify-content: center
+			.navbar-nav
+				.nav-item
+					.nav-link
+						position: relative
+						&:before
+							content: ''
+							position: absolute
+							width: .8rem
+							height: 2px
+							background: #e4923a
+							opacity: 0
+							left: 50%
+							transform: translateX(-50%)
+							bottom: 2px
+						font-size: 1rem
+						color: #d3d8e1
+						padding: 0 1.5rem
+						text-shadow: 0.1px 0.1px 1px
+						&:hover
+							color: #264284
+							&:before
+								opacity: 1
